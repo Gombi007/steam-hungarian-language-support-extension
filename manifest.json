@@ -1,0 +1,23 @@
+{
+    "name": "Steam Hungarian Language Support",
+    "description": "Google chrome extension to steam where you can check Hungarian language availability from a third party language support creators",
+    "version": "0.1.0",
+    "manifest_version": 3,
+    "icons": {
+        "36": "./logo1.jpg"
+    },
+    "background":{
+        "service_worker":"./background.js"
+    },
+    "options_page":"./options.html",
+    "action":{
+        "default_popup":"popup.html"
+    },
+    "permissions":[
+        "tabs",
+        "scripting"       
+    ],
+    "host_permissions": [
+        "https://store.steampowered.com/app/"
+      ]
+}
