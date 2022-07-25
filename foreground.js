@@ -1,6 +1,7 @@
 if (document.getElementById("magyarositas") === null) {
   let gameTitle = document.getElementById("appHubAppName").innerHTML;
   gameTitle = gameTitle.replaceAll("™", "");
+  gameTitle = gameTitle.replaceAll("®", "");
 
   //create a container
   let container = document.createElement("a");
