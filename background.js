@@ -1,16 +1,18 @@
-chrome.tabs.onActivated.addListener((tab) => {
-  chrome.tabs.get(tab.tabId, (current_tab_info) => {
-    if (/^https:\/\/store\.steampowered\.com\/app/.test(current_tab_info.url)) {
+chrome.tabs.onUpdated.addListener(
+  (tabId, changeInfo, tab) => {
+       if (/^https:\/\/store\.steampowered\.com\/app/.test(changeInfo.url)) {
       chrome.scripting.insertCSS({
-        target: { tabId: tab.tabId },
-        files: ['./language-support.css']})
+        target: { tabId: tabId },
+        files: ['./all.css']})
+      
+        chrome.scripting.insertCSS({
+          target: { tabId: tabId },
+          files: ['./language-support.css']})
 
       chrome.scripting.executeScript({
-        target: { tabId: tab.tabId, allFrames: false },
+        target: { tabId: tabId, allFrames: false },
         files: ["./foreground.js"],
-      },
-      ()=>{console.log("hello");}
-      );
+      });
     }
   });
-});
+

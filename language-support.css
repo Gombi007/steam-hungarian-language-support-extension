@@ -1,4 +1,18 @@
 .language-support-link{
 font-size: 1rem !important ;
 padding: 0.45rem !important;
+margin-left: 0.2rem !important;
+}
+
+.content{   
+    width: max-content !important;
+    display: flex !important;   
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.content i{   
+    color: greenyellow;
+    --ggs:1
+    
 }

@@ -4,7 +4,10 @@
     "version": "0.1.0",
     "manifest_version": 3,
     "icons": {
-        "36": "./logo1.jpg"
+        "16": "./logo1.png",
+        "32": "./logo1.png",
+        "48": "./logo1.png",
+        "128": "./logo1.png"
     },
     "background":{
         "service_worker":"./background.js"
